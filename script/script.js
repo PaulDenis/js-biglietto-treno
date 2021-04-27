@@ -25,6 +25,11 @@ else if (eta >= 65) {
     prezzo_biglietto_scontato = prezzo_biglietto;
 }
 
+// metodo per arrotondare SEMPRE a due decimali.
+// var prezzo_biglietto_scontato = prezzo_biglietto_scontato.toFixed(2);
+
+//metodo per arrotondare a MASSIMO due cifre decimali.
+var prezzo_biglietto_scontato = Math.round((prezzo_biglietto_scontato + Number.EPSILON) *100 ) /100;
 
 
 console.log(prezzo_biglietto_scontato);
